@@ -1,0 +1,137 @@
+/* تحسينات خاصة بالتخطيط */
+
+/* تحسين الشريط الجانبي */
+.sidebar-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-item:hover {
+  transform: translateX(-2px);
+}
+
+/* تحسين الأيقونات */
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+}
+
+/* تحسين الانتقالات */
+.slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* تحسين شريط البحث */
+.search-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* تحسين الإشعارات */
+.notification-badge {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* تحسين الأفاتار */
+.avatar-wrapper {
+  transition: transform 0.2s ease-in-out;
+}
+
+.avatar-wrapper:hover {
+  transform: scale(1.05);
+}
+
+/* تحسين القوائم المنسدلة */
+.dropdown-content {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تحسين الاستجابة */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .header {
+    padding: 0 1rem;
+  }
+}
+
+/* تحسين الألوان للوضع المظلم */
+.dark .sidebar {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+.dark .header {
+  background: var(--card);
+  border-color: var(--border);
+}
+
+/* تحسين التمرير */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+

@@ -1,0 +1,40 @@
+# متطلبات مشروع منصة أيديا المتكاملة
+# Django والمكتبات الأساسية
+Django==5.2.5
+djangorestframework==3.16.1
+django-cors-headers==4.7.0
+
+# قاعدة البيانات
+psycopg2-binary==2.9.10
+
+# المصادقة والأمان
+djangorestframework-simplejwt==5.5.1
+PyJWT==2.10.1
+
+# المهام الخلفية
+celery==5.5.3
+redis==6.4.0
+
+# إدارة الإعدادات
+python-decouple==3.8
+
+# معالجة الصور
+Pillow==11.3.0
+
+# أدوات إضافية للتطوير
+django-extensions==3.2.3
+ipython==8.30.0
+
+# اختبارات
+pytest==8.3.4
+pytest-django==4.9.0
+factory-boy==3.3.1
+
+# أدوات التحليل والجودة
+flake8==7.1.1
+black==24.10.0
+isort==5.13.2
+
+# توثيق API
+drf-spectacular==0.28.0
+
